@@ -1,0 +1,317 @@
+/* Reset / Normalize
+  ============================= */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: button;
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* Fonts
+  ============================= */
+@font-face {
+  font-family: "sans-pro";
+  src: url("../../fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Variables
+  ============================= */
+body {
+  font-family: sans-pro;
+}
+
+/* Hero Section
+================================ */
+.hero {
+  height: 1383px;
+  font-size: 12px;
+}
+.hero .hero-wrap-label {
+  position: absolute;
+}
+.hero .hero-wrap-header-link {
+  display: none;
+  height: 0;
+  transform: scaleY(0);
+}
+.hero .hero-wrap input:checked + .hero-content header .hero-wrap-header-link {
+  height: 100%;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.2s ease;
+}
+.hero .hero-content {
+  height: 1383px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero .hero-content .body-home {
+  padding-bottom: 80px;
+}
+.hero .hero-content .body-home .body-home-title {
+  font-size: 55px;
+  white-space: nowrap;
+}
+.hero .hero-content .body-home .body-home-button {
+  width: 161px;
+  height: 44px;
+  background: #C271FF;
+  border: none;
+  border-radius: 22px;
+  font-size: 14px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+}
+.hero .hero-content .footer-home {
+  padding-bottom: 60px;
+}
+.hero .hero-content .footer-home .text-color {
+  color: #b66ef5;
+}
+.hero .hero-content .footer-home .footer-home-card {
+  max-width: 180px;
+  height: 280px;
+}
+
+.home-page {
+  background: #071629 url("../images/pic_1.jpg") no-repeat 60% 0;
+  background-size: 200%;
+}
+
+/* Carousel Section
+================================ */
+.carousel {
+  height: 591px;
+}
+.carousel .button-carousel {
+  background: transparent;
+  border: none;
+}
+.carousel .button-carousel:hover > .carousel-button-icon {
+  visibility: visible;
+}
+.carousel .button-carousel .carousel-button-icon {
+  visibility: hidden;
+}
+
+/* 768px view break point
+  ============================= */
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 1093px;
+    background-size: cover;
+  }
+  .hero .hero-wrap-header-link {
+    display: block;
+    height: 100%;
+    transform: scaleY(1);
+  }
+  .hero .hero-content {
+    height: 1093px;
+  }
+  .hero .hero-content .body-home {
+    padding-bottom: 80px;
+  }
+  .hero .hero-content .body-home .body-home-title {
+    font-size: 90px;
+  }
+
+  .carousel {
+    height: 392px;
+  }
+}
+/* 1440px view break point
+  ============================= */
+@media screen and (min-width: 1440px) {
+  .hero {
+    height: 1093px;
+  }
+  .hero .body-home {
+    padding-top: 80px;
+  }
+  .hero-wrap {
+    max-width: 1440px;
+  }
+  .hero-wrap-header {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

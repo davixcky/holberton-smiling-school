@@ -1,0 +1,146 @@
+@import "shared/_reset-styles";
+@import "shared/_variables";
+
+body {
+  font-family: $font-family_primary;
+}
+
+/* Hero Section
+================================ */
+.hero {
+  height: 1383px;
+  font-size: 12px;
+
+  .hero-wrap-label {
+    position: absolute;
+  }
+
+  .hero-wrap-header-link {
+    display: none;
+    height: 0;
+    transform: scaleY(0);
+  }
+
+  .hero-wrap input:checked + .hero-content header .hero-wrap-header-link {
+    height: 100%;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform .2s ease;
+  }
+
+  .hero-content {
+    height: 1383px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .body-home {
+      padding-bottom: 80px;
+
+      .body-home-title {
+        font-size: 55px;
+        white-space: nowrap;
+      }
+
+      .body-home-button {
+        width: 161px;
+        height: 44px;
+        background: #C271FF;
+        border: none;
+        border-radius: 22px;
+        font-size: 14px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        margin-top: 30px;
+      }
+    }
+
+    .footer-home {
+      padding-bottom: 60px;
+
+      .text-color {
+        color: #b66ef5;
+      }
+
+      .footer-home-card {
+        max-width: 180px;
+        height: 280px;
+      }
+    }
+  }
+
+}
+
+.home-page {
+  background: #071629 url("../images/pic_1.jpg") no-repeat 60% 0;
+  background-size: 200%;
+}
+
+/* Carousel Section
+================================ */
+.carousel {
+  height: 591px;
+  .button-carousel {
+    background: transparent;
+    border: none;
+    &:hover > .carousel-button-icon {
+      visibility: visible;
+    }
+    .carousel-button-icon {
+      visibility: hidden;
+
+    }
+  }
+
+}
+/* 768px view break point
+  ============================= */
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 1093px;
+    background-size: cover;
+
+    .hero-wrap-header-link {
+      display: block;
+      height: 100%;
+      transform: scaleY(1);
+    }
+
+    .hero-content {
+      height: 1093px;
+
+      .body-home {
+        padding-bottom: 80px;
+
+        .body-home-title {
+          font-size: 90px;
+        }
+      }
+    }
+
+  }
+  .carousel {
+    height: 392px;
+  }
+}
+
+/* 1440px view break point
+  ============================= */
+@media screen and (min-width: 1440px) {
+  .hero {
+    height: 1093px;
+
+    .body-home {
+      padding-top: 80px;
+    }
+
+    &-wrap {
+      max-width: 1440px;
+
+      &-header {
+        padding-left: 175px;
+        padding-right: 175px;
+      }
+    }
+  }
+}
